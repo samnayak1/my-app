@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 function Admin() {
     const [contracts,setContracts]=useState('');
 
-    fetch('http://admindata/contracts')
+    fetch('http://admindata/contracts',
+    {method:'GET'})
     .then(res=>{
          return res.json();
         
@@ -12,9 +13,17 @@ function Admin() {
         setContracts(data);
     })
     const deleteContract=()=>{
-        fetch('http://admindata/contracts',{
+        fetch('http://admindata/contracts/delete+contract_id',{
             method:'Delete'
         })
+    }
+    const editContract=()=>{
+        fetch('http://admindata/contracts/edit+contract_id',{
+            method:'PUT',
+            headers:{"Content_Type":"appliction/json"},
+            body:JSON.stringify(contracts)
+        })
+        .then(()=>{console.log('new contract added')});
     }
   return (
 
