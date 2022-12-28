@@ -11,6 +11,11 @@ function Admin() {
     .then((data)=>{
         setContracts(data);
     })
+    const deleteContract=()=>{
+        fetch('http://admindata/contracts',{
+            method:'Delete'
+        })
+    }
   return (
 
 
@@ -30,6 +35,7 @@ function Admin() {
         <td>{contract.filename}</td>
         <td>{contract.uploaded_by}</td>
         <td>{contract.expiry_date}</td>
+        <button onClick={deleteContract}>delete</button>
 
 
 
