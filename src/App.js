@@ -1,6 +1,6 @@
 
 import './App.css';
-import './Admin';
+import Admin from './Admin';
 
 function App() {
   return (

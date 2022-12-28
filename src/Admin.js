@@ -17,10 +17,10 @@ function Admin() {
     <div>
     <thead>
         <tr>
-            <th>contract_id</th>
-            <th>filename</th>
-            <th>user that uploaded</th>
-            <th>expiry date</th>
+            <th>contract_id </th>
+            <th>filename </th>
+            <th>user that uploaded </th>
+            <th>expiry date </th>
         </tr>
     </thead>
     <tbody>
