@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-function Admin(url) {
+function Admin() {
     const [contracts,setContracts]=useState('');
 
-    fetch(url)
+    fetch('http://admindata/contracts')
     .then(res=>{
          return res.json();
         
